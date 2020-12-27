@@ -13,9 +13,9 @@
 
 In this assignment, you are going to create a login screen. Your login screen should include four UI elements: email EditText, password EditText, information TextView, and login Button. Start your UI design with **AbsoluteLayout** or **ConstraintLayout** (feel free to use infer constraints).
 
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/5/Assignment/img_1.png" alt="img_1" style="zoom:58%;" />
 
 
-*Fig. 1 overall design.*
 
 ### Email EditText and Password EditText
 
@@ -25,7 +25,7 @@ In this assignment, you are going to create a login screen. Your login screen sh
 
  
 
-*Fig. 2 email and password EditText.*
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/5/Assignment/img_2.png" style="zoom:58%;" />
 
 
 
@@ -39,7 +39,7 @@ In this assignment, you are going to create a login screen. Your login screen sh
 
  
 
-*Fig. 3 information TextView.*
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/5/Assignment/img_3.png" alt="1" style="zoom:58%;" />
 
 
 
@@ -49,7 +49,7 @@ In this assignment, you are going to create a login screen. Your login screen sh
 
  
 
-*Fig. 4 email validation.*
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/5/Assignment/img_4.png" style="zoom:58%;" />
 
 
 

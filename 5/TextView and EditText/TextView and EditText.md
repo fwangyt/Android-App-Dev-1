@@ -38,7 +38,7 @@ Palette window / Text / TextView
 
 Palette window / Text / Plain Text
 
-<img src="/Users/howdong/Desktop/ACC/5a/TextView and EditText/img_1.png" alt="img_1" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/5/TextView%20and%20EditText/img_1.png" style="zoom:50%;" />
 
 #### XML
 

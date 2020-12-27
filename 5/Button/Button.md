@@ -26,7 +26,7 @@ import android.widget.Button;
 
 Palette window / Buttons / Button
 
-<img src="/Users/howdong/Desktop/ACC/5a/Button/img_1.png" alt="img_1" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/5/Button/img_1.png" style="zoom:50%;" />
 
 #### XML
 
