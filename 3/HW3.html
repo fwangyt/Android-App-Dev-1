@@ -2,15 +2,14 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>HW3</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
-.mac-os-11 { --title-bar-height: 28px; }
+<title>HW3</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -78,7 +77,6 @@ div.hr:focus { cursor: none; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
 li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
@@ -88,6 +86,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
@@ -101,7 +100,6 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
@@ -152,16 +150,13 @@ table tr th { border-bottom-width: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 @media print { 
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
 
 
 :root {
@@ -357,24 +352,24 @@ table tr:nth-child(2n),
 thead {
     background-color: #f8f8f8;
 }
-table th {
+table tr th {
     font-weight: bold;
     border: 1px solid #dfe2e5;
     border-bottom: 0;
     margin: 0;
     padding: 6px 13px;
 }
-table td {
+table tr td {
     border: 1px solid #dfe2e5;
     margin: 0;
     padding: 6px 13px;
 }
-table th:first-child,
-table td:first-child {
+table tr th:first-child,
+table tr td:first-child {
     margin-top: 0;
 }
-table th:last-child,
-table td:last-child {
+table tr th:last-child,
+table tr td:last-child {
     margin-bottom: 0;
 }
 
@@ -544,10 +539,10 @@ header, .context-menu, .megamenu-content, footer{
     background: #999;
 }
 
- :root {--mermaid-font-zoom:1em ;} 
+
 </style>
 </head>
 <body class='typora-export'>
-<div id='write'  class=''><h2><a name="assignment-2-java-oops" class="md-header-anchor"></a><span>Assignment 2: </span><strong><span>Java OOPs</span></strong><span> </span></h2><p>&nbsp;</p><p><span>*Starter code:  </span><a href='https://github.com/fwangyt/Android-App-Dev-1/blob/master/3/Assignment/A3_Pawprint.zip?raw=true'><span>A3_Pawprint</span></a></p><p>&nbsp;</p><h3><a name="objectives" class="md-header-anchor"></a><span>Objectives </span></h3><ul><li><span>Java Object-Oriented Programming in Android Studio. </span></li><li><span>Debugging in Android Studio. </span></li></ul><p>&nbsp;</p><h3><a name="requirements" class="md-header-anchor"></a><span>Requirements </span></h3><p><span>Download starter code, </span><em><span>A3_Pawprint.zip</span></em><span>. You are provided with an incomplete Android project (a simple inventory management app) and your task is to make it work. You need to complete </span><strong><span>Category</span></strong><span> class and </span><strong><span>Item</span></strong><span> class to run the app. </span></p><p>&nbsp;</p><h4><a name="class-category" class="md-header-anchor"></a><span>Class </span><strong><span>Category</span></strong><span> </span></h4><ol><li><p><span>A private instance variable of type String named </span><strong><span>name</span></strong><span> (10 points). </span></p><ul><li><span>With public getter and setter methods. </span></li></ul></li></ol><ol start='2' ><li><p><span>A private instance variable of type ArrayList of </span><strong><span>Item</span></strong><span> named </span><strong><span>items</span></strong><span> (10 points). </span></p><ul><li><span>Initialize the ArrayList of </span><strong><span>Item</span></strong><span>.  </span></li><li><span>With public getter and setter methods. </span></li></ul></li></ol><ol start='3' ><li><p><span>A public parameterized constructor (10 points). </span></p><ul><li><span>Parameter(s): one parameter of type String named </span><strong><span>name</span></strong><span>. </span></li></ul><ul><li><span>Initialize the instance variable </span><strong><span>name</span></strong><span> inside the constructor. </span></li></ul></li></ol><ol start='4' ><li><p><span>A public instance method named </span><strong><span>addItem</span></strong><span> (10 points). </span></p><ul><li><span>Parameter(s): one parameter of type </span><strong><span>Item</span></strong><span> named </span><strong><span>item</span></strong><span>. </span></li></ul><ul><li><span>Return type: void. </span></li></ul><ul><li><span>Add the parameter </span><strong><span>item</span></strong><span> into the List </span><strong><span>items</span></strong><span> Inside the method. </span></li></ul></li></ol><ol start='5' ><li><p><span>A public instance method named </span><strong><span>getItemCount</span></strong><span> (10 points). </span></p><ul><li><span>Parameter(s): no parameter. </span></li></ul><ul><li><span>Return type: int. </span></li></ul><ul><li><span>Return the size of the List </span><strong><span>items</span></strong><span> inside the method. </span></li></ul></li></ol><p><span>	</span><span>*if you are not familiar with the ArrayList, there is a quick introduction below. </span></p><p>&nbsp;</p><h4><a name="class-item" class="md-header-anchor"></a><span>Class Item </span></h4><ol><li><p><span>A private instance variable of type String named </span><strong><span>no</span></strong><span> (10 points). </span></p><ul><li><span>With public getter and setter methods. </span></li></ul></li></ol><ol start='2' ><li><p><span>A private instance variable of type String named </span><strong><span>name</span></strong><span> (10 points). </span></p><ul><li><span>With public getter and setter methods. </span></li></ul></li></ol><ol start='3' ><li><p><span>A private instance variable of type double named </span><strong><span>price</span></strong><span> (10 points). </span></p><ul><li><span>With public getter and setter methods. </span></li></ul></li></ol><ol start='4' ><li><p><span>A private instance variable of type int named </span><strong><span>stock</span></strong><span> (10 points). </span></p><ul><li><span>With public getter and setter methods. </span></li></ul></li></ol><ol start='5' ><li><span>A public default constructor (5 points). </span></li></ol><ol start='6' ><li><p><span>A public parameterized constructor (5 points). </span></p><ul><li><span>Parameter(s): four parameters -- type string named </span><strong><span>no</span></strong><span>, type string named </span><strong><span>name</span></strong><span>, type double named </span><strong><span>price</span></strong><span>, and type int named </span><strong><span>stock</span></strong><span>. </span></li></ul><ul><li><span>Initialize the instance variable </span><strong><span>no/name/price/stock</span></strong><span> inside the constructor. </span></li></ul></li></ol><p>&nbsp;</p><h3><a name="submission" class="md-header-anchor"></a><span>Submission </span></h3><ul><li><span>Zip your Android Studio project folder and submit your .zip file via Canvas. </span></li></ul><p>&nbsp;</p><h3><a name="grading" class="md-header-anchor"></a><span>Grading </span></h3><ul><li><span>The assignment is based on 100 possible points. </span></li><li><span>Run the app with full functionality (10 bonus points). </span></li></ul><p>&nbsp;</p><h3><a name="supplements" class="md-header-anchor"></a><span>Supplements </span></h3><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Assignment/img_1.png" referrerpolicy="no-referrer"></p></div>
+<div id='write'  class=''><h2><a name="-assignment-3-java-oops" class="md-header-anchor"></a><span>Assignment 3: </span><strong><span>Java OOPs</span></strong></h2><p>&nbsp;</p><p><span>*Starter code:  </span><a href='https://github.com/fwangyt/Android-App-Dev-1/blob/master/3/Assignment/A3_Pawprint.zip?raw=true'><span>A3_Pawprint</span></a></p><p>&nbsp;</p><h3><a name="objectives" class="md-header-anchor"></a><span>Objectives </span></h3><ul><li><span>Java Object-Oriented Programming in Android Studio. </span></li><li><span>Debugging in Android Studio. </span></li></ul><p>&nbsp;</p><h3><a name="requirements" class="md-header-anchor"></a><span>Requirements </span></h3><p><span>Download starter code, </span><em><span>A3_Pawprint.zip</span></em><span>. You are provided with an incomplete Android project (a simple inventory management app) and your task is to make it work. You need to complete </span><strong><span>Category</span></strong><span> class and </span><strong><span>Item</span></strong><span> class to run the app. </span></p><p>&nbsp;</p><h4><a name="class-category" class="md-header-anchor"></a><span>Class </span><strong><span>Category</span></strong><span> </span></h4><ol start='' ><li><p><span>A private instance variable of type String named </span><strong><span>name</span></strong><span> (10 points). </span></p><ul><li><span>With public getter and setter methods. </span></li></ul></li><li><p><span>A private instance variable of type ArrayList of </span><strong><span>Item</span></strong><span> named </span><strong><span>items</span></strong><span> (10 points). </span></p><ul><li><span>Initialize the ArrayList of </span><strong><span>Item</span></strong><span>.  </span></li><li><span>With public getter and setter methods. </span></li></ul></li><li><p><span>A public parameterized constructor (10 points). </span></p><ul><li><span>Parameter(s): one parameter of type String named </span><strong><span>name</span></strong><span>. </span></li><li><span>Initialize the instance variable </span><strong><span>name</span></strong><span> inside the constructor. </span></li></ul></li><li><p><span>A public instance method named </span><strong><span>addItem</span></strong><span> (10 points). </span></p><ul><li><span>Parameter(s): one parameter of type </span><strong><span>Item</span></strong><span> named </span><strong><span>item</span></strong><span>. </span></li><li><span>Return type: void. </span></li><li><span>Add the parameter </span><strong><span>item</span></strong><span> into the List </span><strong><span>items</span></strong><span> Inside the method. </span></li></ul></li><li><p><span>A public instance method named </span><strong><span>getItemCount</span></strong><span> (10 points). </span></p><ul><li><span>Parameter(s): no parameter. </span></li><li><span>Return type: int. </span></li><li><span>Return the size of the List </span><strong><span>items</span></strong><span> inside the method. </span></li></ul></li></ol><p><span>	</span><span>*if you are not familiar with the ArrayList, there is a quick introduction below. </span></p><p>&nbsp;</p><h4><a name="class-item" class="md-header-anchor"></a><span>Class Item </span></h4><ol start='' ><li><p><span>A private instance variable of type String named </span><strong><span>no</span></strong><span> (10 points). </span></p><ul><li><span>With public getter and setter methods. </span></li></ul></li><li><p><span>A private instance variable of type String named </span><strong><span>name</span></strong><span> (10 points). </span></p><ul><li><span>With public getter and setter methods. </span></li></ul></li><li><p><span>A private instance variable of type double named </span><strong><span>price</span></strong><span> (10 points). </span></p><ul><li><span>With public getter and setter methods. </span></li></ul></li><li><p><span>A private instance variable of type int named </span><strong><span>stock</span></strong><span> (10 points). </span></p><ul><li><span>With public getter and setter methods. </span></li></ul></li><li><p><span>A public default constructor (5 points). </span></p></li><li><p><span>A public parameterized constructor (5 points). </span></p><ul><li><span>Parameter(s): four parameters -- type string named </span><strong><span>no</span></strong><span>, type string named </span><strong><span>name</span></strong><span>, type double named </span><strong><span>price</span></strong><span>, and type int named </span><strong><span>stock</span></strong><span>. </span></li><li><span>Initialize the instance variable </span><strong><span>no/name/price/stock</span></strong><span> inside the constructor. </span></li></ul></li></ol><p>&nbsp;</p><h3><a name="submission" class="md-header-anchor"></a><span>Submission </span></h3><ul><li><span>Zip your Android Studio project folder and submit your .zip file via Canvas. </span></li></ul><p>&nbsp;</p><h3><a name="grading" class="md-header-anchor"></a><span>Grading </span></h3><ul><li><span>The assignment is based on 100 possible points. </span></li><li><span>Run the app with full functionality (10 bonus points). </span></li></ul><p>&nbsp;</p><h3><a name="supplements" class="md-header-anchor"></a><span>Supplements </span></h3><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Assignment/img_1.png" referrerpolicy="no-referrer"></p></div>
 </body>
 </html>
