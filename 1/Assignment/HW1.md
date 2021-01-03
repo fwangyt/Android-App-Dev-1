@@ -36,9 +36,14 @@
 
 #### 1. Screenshot Example 
 
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Assignment/img_1.png)
+
 
 
 #### 2. How to change the text on ActionBar
 
 Find strings.xml, it’s located under app/res/values. Or you can simply press **Shift** twice and search strings.xml. Inside strings.xml, modify the string after “App_name”. 
 
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Assignment/img_2.png)
+
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Assignment/img_3.png)

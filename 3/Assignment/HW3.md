@@ -2,7 +2,7 @@
 
 
 
-*Starter code:  
+*Starter code:  [A3_Pawprint](https://github.com/fwangyt/Android-App-Dev-1/blob/master/3/Assignment/A3_Pawprint.zip?raw=true)
 
 
 
@@ -93,3 +93,4 @@ Download starter code, *A3_Pawprint.zip*. You are provided with an incomplete An
 
 ### Supplements 
 
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Assignment/img_1.png)

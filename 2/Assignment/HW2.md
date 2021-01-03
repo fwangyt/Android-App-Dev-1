@@ -2,7 +2,7 @@
 
 
 
-*Starter code:  
+*Starter code:  [A2_Pawprint](https://github.com/fwangyt/Android-App-Dev-1/blob/master/2/Assignment/A2_Pawprint.zip?raw=true)
 
 
 
@@ -38,6 +38,8 @@ Each method comes with 5 test cases. You can check your assignment score by run 
 
 [1] Run the app to check your assignment score. 
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Assignment/img_1.png)
 
 [2] Run the app in debug mode to check failed test cases. 
+
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Assignment/img_2.png)
