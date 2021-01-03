@@ -45,7 +45,7 @@ To change the minimum support android version:
 1. Create a Android project with Empty Activity, and name it Switch Example.
 2. Go to activity_mail.xml file, delete the existing TextView, and drag a Switch to the center of the screen with constraints. And set ID to my_switch.
 3. Set text property to This is a Switch!, set textOn property to on, and set textOff property to off.
-4. Since the showText property could be hard to find, there is an easy to make it. Go to Text mode, and all the following line of code.
+4. Since the showText property could be hard to find, there is an easy to make it. Go to Text mode, and add the following line of code.
 5. Go back to Design mode, and place anther TextView under the Switch with constraints and set the ID to result_tv.
 6. Go to MainActivity.java, and add the following code.
 7. Run the App, on click the Switch. It will also display some information in the Logcat.
