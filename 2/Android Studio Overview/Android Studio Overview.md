@@ -18,7 +18,7 @@ This page provides an introduction to basic Android Studio features. For a summa
 
 ## Project structure
 
-
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_0.png" alt="11" style="zoom:50%;" />
 
 **Figure 1.** The project files in Android view.
 
@@ -40,7 +40,7 @@ The Android project structure on disk differs from this flattened representation
 
 You can also customize the view of the project files to focus on specific aspects of your app development. For example, selecting the **Problems** view of your project displays links to the source files containing any recognized coding and syntax errors, such as a missing XML element closing tag in a layout file.
 
-
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_01.png" style="zoom:50%;" />
 
 **Figure 2.** The project files in Problems view, showing a layout file with a problem.
 
@@ -54,7 +54,7 @@ For more information, see [Projects overview](https://developer.android.com/stud
 
 The Android Studio main window is made up of several logical areas identified in figure 3.
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_02.png)
 
 **Figure 3.** The Android Studio main window.
 
@@ -143,11 +143,11 @@ As you edit, Android Studio automatically applies formatting and styles as speci
 
 Although the IDE automatically applies formatting as you work, you can also explicitly call the *Reformat Code* action by pressing **Control+Alt+L** (**Opt+Command+L** on a Mac), or auto-indent all lines by pressing **Control+Alt+I** (**Control+Option+I** on a Mac).
 
-
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_03.png" style="zoom:50%;" />
 
 **Figure 4.** Code before formatting.
 
-
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_04.png" style="zoom:50%;" />
 
 **Figure 5.** Code after formatting.
 
@@ -230,7 +230,7 @@ Use inline debugging to enhance your code walk-throughs in the debugger view wit
 - Lambda and operator expressions
 - Tooltip values
 
-
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_05.png" style="zoom:50%;" />
 
 **Figure 6.** An inline variable value.
 
@@ -276,7 +276,7 @@ Whenever you compile your program, Android Studio automatically runs configured 
 
 The Lint tool checks your Android project source files for potential bugs and optimization improvements for correctness, security, performance, usability, accessibility, and internationalization.
 
-
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_06.png" style="zoom:50%;" />
 
 **Figure 7.** The results of a Lint inspection in Android Studio.
 
@@ -312,9 +312,9 @@ You can sign in to your developer account in Android Studio to access additional
 
 After you open a project in Android Studio, you can sign in to your developer account or switch developer accounts, as follows:
 
-1. Click the profile icon ![img](https://developer.android.com/studio/images/intro/profile-icon.png) at the end of the toolbar, as shown in figure 8.
+1. Click the profile icon the end of the toolbar, as shown in figure 8.
 
-   
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_07.png)
 
    **Figure 8.** Click the profile icon at the end of the toolbar to sign in.
 
