@@ -4,7 +4,7 @@
 
 A layout defines the structure for a user interface in your app, such as in an [activity](https://developer.android.com/guide/components/activities). All elements in the layout are built using a hierarchy of `View` and `ViewGroup` objects. A `View` usually draws something the user can see and interact with. Whereas a `ViewGroup` is an invisible container that defines the layout structure for `View` and other `ViewGroup` objects, as shown in figure.
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Android%20User%20Interface%20Overview/img_0.png)
 
 
 
@@ -14,7 +14,7 @@ A notification is a message that Android displays outside your app's UI to provi
 
 Figure below shows a visual representation of a navigation graph for a sample app containing six destinations connected by five actions. Each destination is represented by a preview thumbnail, and connecting actions are represented by arrows that show how users can navigate from one destination to another.
 
-
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Android%20User%20Interface%20Overview/img_01.png" style="zoom:50%;" />
 
 
 
@@ -26,7 +26,7 @@ The *app bar*, also known as the *action bar*, is one of the most important desi
 - Access to important actions in a predictable way, such as search.
 - Support for navigation and view switching (with tabs or drop-down lists).
 
-
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Android%20User%20Interface%20Overview/img_02.png" style="zoom:50%;" />
 
 
 
@@ -34,7 +34,7 @@ The *app bar*, also known as the *action bar*, is one of the most important desi
 
 Navigation refers to the interactions that allow users to navigate across, into, and back out from the different pieces of content within your app. Android Jetpack's Navigation component helps you implement navigation, from simple button clicks to more complex patterns, such as app bars and the navigation drawer.
 
-
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Android%20User%20Interface%20Overview/img_03.png" style="zoom:50%;" />
 
 
 
@@ -42,7 +42,7 @@ Navigation refers to the interactions that allow users to navigate across, into,
 
 A toast provides simple feedback about an operation in a small popup. It only fills the amount of space required for the message and the current activity remains visible and interactive. Toasts automatically disappear after a timeout.
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Android%20User%20Interface%20Overview/img_04.png)
 
 
 
@@ -50,7 +50,7 @@ A toast provides simple feedback about an operation in a small popup. It only fi
 
 A dialog is a small window that prompts the user to make a decision or enter additional information. A dialog does not fill the screen and is normally used for modal events that require users to take an action before they can proceed.
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Android%20User%20Interface%20Overview/img_05.png)
 
 
 
@@ -58,7 +58,7 @@ A dialog is a small window that prompts the user to make a decision or enter add
 
 Menus are a common user interface component in many types of applications. To provide a familiar and consistent user experience, you should use the `Menu` APIs to present user actions and other options in your activities.
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Android%20User%20Interface%20Overview/img_06.png)
 
 
 
@@ -66,5 +66,5 @@ Menus are a common user interface component in many types of applications. To pr
 
 Search is a core user feature on Android. Users should be able to search any data that is available to them, whether the content is located on the device or the Internet. To help create a consistent search experience for users, Android provides a search framework that helps you implement search for your application.
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/3/Android%20User%20Interface%20Overview/img_07.png)
 
