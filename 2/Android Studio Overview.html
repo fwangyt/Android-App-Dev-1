@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Android Studio Overview</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1em ;} 
+</style>
+</head>
+<body class='typora-export'>
+<div id='write'  class=''><h2><a name="android-studio-overview" class="md-header-anchor"></a><span>Android Studio Overview</span></h2><p><span>Android Studio is the official Integrated Development Environment (IDE) for Android app development, based on </span><a href='https://www.jetbrains.com/idea/'><span>IntelliJ IDEA </span></a><span>. On top of IntelliJ&#39;s powerful code editor and developer tools, Android Studio offers even more features that enhance your productivity when building Android apps, such as:</span></p><ul><li><span>A flexible Gradle-based build system</span></li><li><span>A fast and feature-rich emulator</span></li><li><span>A unified environment where you can develop for all Android devices</span></li><li><span>Apply Changes to push code and resource changes to your running app without restarting your app</span></li><li><span>Code templates and GitHub integration to help you build common app features and import sample code</span></li><li><span>Extensive testing tools and frameworks</span></li><li><span>Lint tools to catch performance, usability, version compatibility, and other problems</span></li><li><span>C++ and NDK support</span></li><li><span>Built-in support for </span><a href='https://cloud.google.com/tools/android-studio/docs/'><span>Google Cloud Platform</span></a><span>, making it easy to integrate Google Cloud Messaging and App Engine</span></li></ul><p><span>This page provides an introduction to basic Android Studio features. For a summary of the latest changes, see </span><a href='https://developer.android.com/studio/releases'><span>Android Studio release notes</span></a><span>.</span></p><p>&nbsp;</p><h2><a name="project-structure" class="md-header-anchor"></a><span>Project structure</span></h2><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_0.png" alt="11" style="zoom:50%;" /></p><p><strong><span>Figure 1.</span></strong><span> The project files in Android view.</span></p><p><span>Each project in Android Studio contains one or more modules with source code files and resource files. Types of modules include:</span></p><ul><li><span>Android app modules</span></li><li><span>Library modules</span></li><li><span>Google App Engine modules</span></li></ul><p><span>By default, Android Studio displays your project files in the Android project view, as shown in figure 1. This view is organized by modules to provide quick access to your project&#39;s key source files.</span></p><p><span>All the build files are visible at the top level under </span><strong><span>Gradle Scripts</span></strong><span> and each app module contains the following folders:</span></p><ul><li><strong><span>manifests</span></strong><span>: Contains the </span><code>AndroidManifest.xml</code><span> file.</span></li><li><strong><span>java</span></strong><span>: Contains the Java source code files, including JUnit test code.</span></li><li><strong><span>res</span></strong><span>: Contains all non-code resources, such as XML layouts, UI strings, and bitmap images.</span></li></ul><p><span>The Android project structure on disk differs from this flattened representation. To see the actual file structure of the project, select </span><strong><span>Project</span></strong><span> from the </span><strong><span>Project</span></strong><span> dropdown (in figure 1, it&#39;s showing as </span><strong><span>Android</span></strong><span>).</span></p><p><span>You can also customize the view of the project files to focus on specific aspects of your app development. For example, selecting the </span><strong><span>Problems</span></strong><span> view of your project displays links to the source files containing any recognized coding and syntax errors, such as a missing XML element closing tag in a layout file.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_01.png" style="zoom:50%;" /></p><p><strong><span>Figure 2.</span></strong><span> The project files in Problems view, showing a layout file with a problem.</span></p><p>&nbsp;</p><p><span>For more information, see </span><a href='https://developer.android.com/studio/projects'><span>Projects overview</span></a><span>.</span></p><p>&nbsp;</p><h2><a name="the-user-interface" class="md-header-anchor"></a><span>The user interface</span></h2><p><span>The Android Studio main window is made up of several logical areas identified in figure 3.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_02.png" referrerpolicy="no-referrer"></p><p><strong><span>Figure 3.</span></strong><span> The Android Studio main window.</span></p><ol><li><span>The </span><strong><span>toolbar</span></strong><span> lets you carry out a wide range of actions, including running your app and launching Android tools.</span></li><li><span>The </span><strong><span>navigation bar</span></strong><span> helps you navigate through your project and open files for editing. It provides a more compact view of the structure visible in the </span><strong><span>Project</span></strong><span> window.</span></li><li><span>The </span><strong><span>editor window</span></strong><span> is where you create and modify code. Depending on the current file type, the editor can change. For example, when viewing a layout file, the editor displays the Layout Editor.</span></li><li><span>The </span><strong><span>tool window bar</span></strong><span> runs around the outside of the IDE window and contains the buttons that allow you to expand or collapse individual tool windows.</span></li><li><span>The </span><strong><span>tool windows</span></strong><span> give you access to specific tasks like project management, search, version control, and more. You can expand them and collapse them.</span></li><li><span>The </span><strong><span>status bar</span></strong><span> displays the status of your project and the IDE itself, as well as any warnings or messages.</span></li></ol><p><span>You can organize the main window to give yourself more screen space by hiding or moving toolbars and tool windows. You can also use keyboard shortcuts to access most IDE features.</span></p><p><span>At any time, you can search across your source code, databases, actions, elements of the user interface, and so on, by double-pressing the Shift key, or clicking the magnifying glass in the upper right-hand corner of the Android Studio window. This can be very useful if, for example, you are trying to locate a particular IDE action that you have forgotten how to trigger.</span></p><p>&nbsp;</p><h3><a name="tool-windows" class="md-header-anchor"></a><span>Tool windows</span></h3><p><span>Instead of using preset perspectives, Android Studio follows your context and automatically brings up relevant tool windows as you work. By default, the most commonly used tool windows are pinned to the tool window bar at the edges of the application window.</span></p><ul><li><span>To expand or collapse a tool window, click the tool’s name in the tool window bar. You can also drag, pin, unpin, attach, and detach tool windows.</span></li><li><span>To return to the current default tool window layout, click </span><strong><span>Window &gt; Restore Default Layout</span></strong><span> or customize your default layout by clicking </span><strong><span>Window &gt; Store Current Layout as Default</span></strong><span>.</span></li><li><span>To show or hide the entire tool window bar, click the window icon </span><img src="https://developer.android.com/studio/images/intro/window-icon_2-1_2x.png" referrerpolicy="no-referrer" alt="img"><span> in the bottom left-hand corner of the Android Studio window.</span></li><li><span>To locate a specific tool window, hover over the window icon and select the tool window from the menu.</span></li></ul><p><span>You can also use keyboard shortcuts to open tool windows. Table 1 lists the shortcuts for the most common windows.</span></p><p><strong><span>Table 1.</span></strong><span> Keyboard shortcuts for some useful tool windows.</span></p><figure><table><thead><tr><th style='text-align:left;' ><span>Tool window</span></th><th style='text-align:left;' ><span>Windows and Linux</span></th><th style='text-align:left;' ><span>Mac</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>Project</span></td><td style='text-align:left;' ><strong><span>Alt+1</span></strong></td><td style='text-align:left;' ><strong><span>Command+1</span></strong></td></tr><tr><td style='text-align:left;' ><span>Version Control</span></td><td style='text-align:left;' ><strong><span>Alt+9</span></strong></td><td style='text-align:left;' ><strong><span>Command+9</span></strong></td></tr><tr><td style='text-align:left;' ><span>Run</span></td><td style='text-align:left;' ><strong><span>Shift+F10</span></strong></td><td style='text-align:left;' ><strong><span>Control+R</span></strong></td></tr><tr><td style='text-align:left;' ><span>Debug</span></td><td style='text-align:left;' ><strong><span>Shift+F9</span></strong></td><td style='text-align:left;' ><strong><span>Control+D</span></strong></td></tr><tr><td style='text-align:left;' ><span>Logcat</span></td><td style='text-align:left;' ><strong><span>Alt+6</span></strong></td><td style='text-align:left;' ><strong><span>Command+6</span></strong></td></tr><tr><td style='text-align:left;' ><span>Return to Editor</span></td><td style='text-align:left;' ><strong><span>Esc</span></strong></td><td style='text-align:left;' ><strong><span>Esc</span></strong></td></tr><tr><td style='text-align:left;' ><span>Hide All Tool Windows</span></td><td style='text-align:left;' ><strong><span>Control+Shift+F12</span></strong></td><td style='text-align:left;' ><strong><span>Command+Shift+F12</span></strong></td></tr></tbody></table></figure><p><span>If you want to hide all toolbars, tool windows, and editor tabs, click </span><strong><span>View &gt; Enter Distraction Free Mode</span></strong><span>. This enables </span><em><span>Distraction Free Mode</span></em><span>. To exit Distraction Free Mode, click </span><strong><span>View &gt; Exit Distraction Free Mode</span></strong><span>.</span></p><p><span>You can use </span><em><span>Speed Search</span></em><span> to search and filter within most tool windows in Android Studio. To use Speed Search, select the tool window and then type your search query.</span></p><p><span>For more tips, see </span><a href='https://developer.android.com/studio/intro/keyboard-shortcuts'><span>Keyboard shortcuts</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="code-completion" class="md-header-anchor"></a><span>Code completion</span></h3><p><span>Android Studio has three types of code completion, which you can access using keyboard shortcuts.</span></p><p><strong><span>Table 2.</span></strong><span> Keyboard shortcuts for code completion.</span></p><figure><table><thead><tr><th style='text-align:left;' ><span>Type</span></th><th style='text-align:left;' ><span>Description</span></th><th style='text-align:left;' ><span>Windows and Linux</span></th><th style='text-align:left;' ><span>Mac</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>Basic Completion</span></td><td style='text-align:left;' ><span>Displays basic suggestions for variables, types, methods, expressions, and so on. If you call basic completion twice in a row, you see more results, including private members and non-imported static members.</span></td><td style='text-align:left;' ><strong><span>Control+Space</span></strong></td><td style='text-align:left;' ><strong><span>Control+Space</span></strong></td></tr><tr><td style='text-align:left;' ><span>Smart Completion</span></td><td style='text-align:left;' ><span>Displays relevant options based on the context. Smart completion is aware of the expected type and data flows. If you call Smart Completion twice in a row, you see more results, including chains.</span></td><td style='text-align:left;' ><strong><span>Control+Shift+Space</span></strong></td><td style='text-align:left;' ><strong><span>Control+Shift+Space</span></strong></td></tr><tr><td style='text-align:left;' ><span>Statement Completion</span></td><td style='text-align:left;' ><span>Completes the current statement for you, adding missing parentheses, brackets, braces, formatting, etc.</span></td><td style='text-align:left;' ><strong><span>Control+Shift+Enter</span></strong></td><td style='text-align:left;' ><strong><span>Shift+Command+Enter</span></strong></td></tr></tbody></table></figure><p><span>You can also perform quick fixes and show intention actions by pressing </span><strong><span>Alt+Enter</span></strong><span>.</span></p><p>&nbsp;</p><h3><a name="find-sample-code" class="md-header-anchor"></a><span>Find sample code</span></h3><p><span>The Code Sample Browser in Android Studio helps you find high-quality, Google-provided Android code samples based on the currently highlighted symbol in your project. For more information, see </span><a href='https://developer.android.com/studio/write/sample-code'><span>Find sample code</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="navigation" class="md-header-anchor"></a><span>Navigation</span></h3><p><span>Here are some tips to help you move around Android Studio.</span></p><ul><li><span>Switch between your recently accessed files using the </span><em><span>Recent Files</span></em><span> action. Press </span><strong><span>Control+E</span></strong><span> (</span><strong><span>Command+E</span></strong><span> on a Mac) to bring up the Recent Files action. By default, the last accessed file is selected. You can also access any tool window through the left column in this action.</span></li><li><span>View the structure of the current file using the </span><em><span>File Structure</span></em><span> action. Bring up the File Structure action by pressing </span><strong><span>Control+F12</span></strong><span> (</span><strong><span>Command+F12</span></strong><span> on a Mac). Using this action, you can quickly navigate to any part of your current file.</span></li><li><span>Search for and navigate to a specific class in your project using the </span><em><span>Navigate to Class</span></em><span> action. Bring up the action by pressing </span><strong><span>Control+N</span></strong><span> (</span><strong><span>Command+O</span></strong><span> on a Mac). Navigate to Class supports sophisticated expressions, including camel humps, paths, line navigate to, middle name matching, and many more. If you call it twice in a row, it shows you the results out of the project classes.</span></li><li><span>Navigate to a file or folder using the </span><em><span>Navigate to File</span></em><span> action. Bring up the Navigate to File action by pressing </span><strong><span>Control+Shift+N</span></strong><span> (</span><strong><span>Command+Shift+O</span></strong><span> on a Mac). To search for folders rather than files, add a / at the end of your expression.</span></li><li><span>Navigate to a method or field by name using the </span><em><span>Navigate to Symbol</span></em><span> action. Bring up the Navigate to Symbol action by pressing </span><strong><span>Control+Shift+Alt+N</span></strong><span> (</span><strong><span>Command+Option+O</span></strong><span> on a Mac).</span></li><li><span>Find all the pieces of code referencing the class, method, field, parameter, or statement at the current cursor position by pressing </span><strong><span>Alt+F7</span></strong><span> (</span><strong><span>Option+F7</span></strong><span> on a Mac).</span></li></ul><p>&nbsp;</p><h3><a name="style-and-formatting" class="md-header-anchor"></a><span>Style and formatting</span></h3><p><span>As you edit, Android Studio automatically applies formatting and styles as specified in your code style settings. You can customize the code style settings by programming language, including specifying conventions for tabs and indents, spaces, wrapping and braces, and blank lines. To customize your code style settings, click </span><strong><span>File &gt; Settings &gt; Editor &gt; Code Style</span></strong><span> (</span><strong><span>Android Studio &gt; Preferences &gt; Editor &gt; Code Style</span></strong><span> on a Mac.)</span></p><p><span>Although the IDE automatically applies formatting as you work, you can also explicitly call the </span><em><span>Reformat Code</span></em><span> action by pressing </span><strong><span>Control+Alt+L</span></strong><span> (</span><strong><span>Opt+Command+L</span></strong><span> on a Mac), or auto-indent all lines by pressing </span><strong><span>Control+Alt+I</span></strong><span> (</span><strong><span>Control+Option+I</span></strong><span> on a Mac).</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_03.png" style="zoom:50%;" /></p><p><strong><span>Figure 4.</span></strong><span> Code before formatting.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_04.png" style="zoom:50%;" /></p><p><strong><span>Figure 5.</span></strong><span> Code after formatting.</span></p><p>&nbsp;</p><h3><a name="version-control-basics" class="md-header-anchor"></a><span>Version control basics</span></h3><p><span>Android Studio supports a variety of version control systems (VCS’s), including Git, GitHub, CVS, Mercurial, Subversion, and Google Cloud Source Repositories.</span></p><p><span>After importing your app into Android Studio, use the Android Studio VCS menu options to enable VCS support for the desired version control system, create a repository, import the new files into version control, and perform other version control operations:</span></p><ol><li><span>From the Android Studio </span><strong><span>VCS</span></strong><span> menu, click </span><strong><span>Enable Version Control Integration</span></strong><span>.</span></li><li><span>From the drop-down menu, select a version control system to associate with the project root, and then click </span><strong><span>OK</span></strong><span>.</span></li></ol><p><span>The VCS menu now displays a number of version control options based on the system you selected.</span></p><p><strong><span>Note:</span></strong><span> You can also use the </span><strong><span>File &gt; Settings &gt; Version Control</span></strong><span> menu option to set up and modify the version control settings.</span></p><p>&nbsp;</p><h2><a name="gradle-build-system" class="md-header-anchor"></a><span>Gradle build system</span></h2><p><span>Android Studio uses Gradle as the foundation of the build system, with more Android-specific capabilities provided by the </span><a href='https://developer.android.com/studio/releases/gradle-plugin'><span>Android plugin for Gradle</span></a><span>. This build system runs as an integrated tool from the Android Studio menu, and independently from the command line. You can use the features of the build system to do the following:</span></p><ul><li><span>Customize, configure, and extend the build process.</span></li><li><span>Create multiple APKs for your app, with different features using the same project and modules.</span></li><li><span>Reuse code and resources across sourcesets.</span></li></ul><p><span>By employing the flexibility of Gradle, you can achieve all of this without modifying your app&#39;s core source files. Android Studio build files are named </span><code>build.gradle</code><span>. They are plain text files that use </span><a href='http://groovy-lang.org/'><span>Groovy</span></a><span> syntax to configure the build with elements provided by the Android plugin for Gradle. Each project has one top-level build file for the entire project and separate module-level build files for each module. When you import an existing project, Android Studio automatically generates the necessary build files.</span></p><p><span>To learn more about the build system and how to configure, see </span><a href='https://developer.android.com/studio/build'><span>Configure your build</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="build-variants" class="md-header-anchor"></a><span>Build variants</span></h3><p><span>The build system can help you create different versions of the same application from a single project. This is useful when you have both a free version and a paid version of your app, or if you want to distribute multiple APKs for different device configurations on Google Play.</span></p><p><span>For more information about configuring build variants, see </span><a href='https://developer.android.com/studio/build/build-variants'><span>Configure build variants</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="multiple-apk-support" class="md-header-anchor"></a><span>Multiple APK support</span></h3><p><span>Multiple APK support allows you to efficiently create multiple APKs based on screen density or ABI. For example, you can create separate APKs of an app for the hdpi and mdpi screen densities, while still considering them a single variant and allowing them to share test APK, javac, dx, and ProGuard settings.</span></p><p><span>For more information about multiple APK support, read </span><a href='https://developer.android.com/studio/build/configure-apk-splits'><span>Build multiple APKs</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="resource-shrinking" class="md-header-anchor"></a><span>Resource shrinking</span></h3><p><span>Resource shrinking in Android Studio automatically removes unused resources from your packaged app and library dependencies. For example, if your application is using </span><a href='https://developers.google.com/android/guides/overview'><span>Google Play services</span></a><span> to access Google Drive functionality, and you are not currently using </span><a href='https://developer.android.com/training/sign-in'><span>Google Sign-In</span></a><span>, then resource shrinking can remove the various drawable assets for the</span><code>SignInButton</code><span> buttons.</span></p><p><strong><span>Note:</span></strong><span> Resource shrinking works in conjunction with code shrinking tools, such as ProGuard.</span></p><p><span>For more information on shrinking code and resources, see </span><a href='https://developer.android.com/studio/build/shrink-code'><span>Shrink your code and resources</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="managing-dependencies" class="md-header-anchor"></a><span>Managing dependencies</span></h3><p><span>Dependencies for your project are specified by name in the </span><code>build.gradle</code><span> file. Gradle takes care of finding your dependencies and making them available in your build. You can declare module dependencies, remote binary dependencies, and local binary dependencies in your </span><code>build.gradle</code><span> file. Android Studio configures projects to use the Maven Central Repository by default. (This configuration is included in the top-level build file for the project.) For more information about configuring dependencies, read </span><a href='https://developer.android.com/studio/build/dependencies'><span>Add build dependencies</span></a><span>.</span></p><p>&nbsp;</p><h2><a name="debug-and-profile-tools" class="md-header-anchor"></a><span>Debug and profile tools</span></h2><p><span>Android Studio assists you in debugging and improving the performance of your code, including inline debugging and performance analysis tools.</span></p><p>&nbsp;</p><h3><a name="inline-debugging" class="md-header-anchor"></a><span>Inline debugging</span></h3><p><span>Use inline debugging to enhance your code walk-throughs in the debugger view with inline verification of references, expressions, and variable values. Inline debug information includes:</span></p><ul><li><span>Inline variable values</span></li><li><span>Referring objects that reference a selected object</span></li><li><span>Method return values</span></li><li><span>Lambda and operator expressions</span></li><li><span>Tooltip values</span></li></ul><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_05.png" style="zoom:50%;" /></p><p><strong><span>Figure 6.</span></strong><span> An inline variable value.</span></p><p><span>To enable inline debugging, in the </span><strong><span>Debug</span></strong><span> window, click </span><strong><span>Settings</span></strong><span> </span><img src="https://developer.android.com/images/tools/studio-debug-settings-icon.png" referrerpolicy="no-referrer" alt="img"><span>and select the checkbox for </span><strong><span>Show Values Inline</span></strong><span>.</span></p><p>&nbsp;</p><h3><a name="performance-profilers" class="md-header-anchor"></a><span>Performance profilers</span></h3><p><span>Android Studio provides performance profilers so you can more easily track your app’s memory and CPU usage, find deallocated objects, locate memory leaks, optimize graphics performance, and analyze network requests. With your app running on a device or emulator, open the </span><strong><span>Android Profiler</span></strong><span> tab.</span></p><p><span>For more information about performance profilers, see </span><a href='https://developer.android.com/studio/profile'><span>Performance profiling tools</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="heap-dump" class="md-header-anchor"></a><span>Heap dump</span></h3><p><span>When you’re profiling memory usage in Android Studio, you can simultaneously initiate garbage collection and dump the Java heap to a heap snapshot in an Android-specific HPROF binary format file. The HPROF viewer displays classes, instances of each class, and a reference tree to help you track memory usage and find memory leaks.</span></p><p><span>For more information about working with heap dumps, see </span><a href='https://developer.android.com/studio/profile/memory-profiler'><span>Inspect the heap and allocations</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="memory-profiler" class="md-header-anchor"></a><span>Memory Profiler</span></h3><p><span>You can use Memory Profiler to track memory allocation and watch where objects are being allocated when you perform certain actions. Knowing these allocations enables you to optimize your app’s performance and memory use by adjusting the method calls related to those actions.</span></p><p><span>For information about tracking and analyzing allocations, see </span><a href='https://developer.android.com/studio/profile/memory-profiler'><span>Inspect the heap and allocations</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="data-file-access" class="md-header-anchor"></a><span>Data file access</span></h3><p><span>The Android SDK tools, such as </span><a href='https://developer.android.com/topic/performance/tracing/command-line'><span>Systrace</span></a><span>, and </span><a href='https://developer.android.com/studio/debug/am-logcat'><span>logcat</span></a><span>, generate performance and debugging data for detailed app analysis.</span></p><p><span>To view the available generated data files, open the Captures tool window. In the list of the generated files, double-click a file to view the data. Right-click any </span><code>.hprof</code><span> files to convert them to the standard </span><a href='https://developer.android.com/studio/profile/investigate-ram'><span>Investigate your RAM usage</span></a><span> file format.</span></p><p>&nbsp;</p><h3><a name="code-inspections" class="md-header-anchor"></a><span>Code inspections</span></h3><p><span>Whenever you compile your program, Android Studio automatically runs configured </span><a href='https://developer.android.com/studio/write/lint'><span>Lint</span></a><span> and other </span><a href='https://www.jetbrains.com/help/idea/2020.1/code-inspection.html'><span>IDE inspections</span></a><span> to help you easily identify and correct problems with the structural quality of your code.</span></p><p><span>The Lint tool checks your Android project source files for potential bugs and optimization improvements for correctness, security, performance, usability, accessibility, and internationalization.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_06.png" style="zoom:50%;" /></p><p><strong><span>Figure 7.</span></strong><span> The results of a Lint inspection in Android Studio.</span></p><p><span>In addition to Lint checks, Android Studio also performs IntelliJ code inspections and validates annotations to streamline your coding workflow.</span></p><p><span>For more information, see </span><a href='https://developer.android.com/studio/write/lint'><span>Improve your code with lint checks</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="annotations-in-android-studio" class="md-header-anchor"></a><span>Annotations in Android Studio</span></h3><p><span>Android Studio supports annotations for variables, parameters, and return values to help you catch bugs, such as null pointer exceptions and resource type conflicts. The Android SDK Manager packages the Support-Annotations library in the Android Support Repository for use with Android Studio. Android Studio validates the configured annotations during code inspection.</span></p><p><span>For more details about Android annotations, see </span><a href='https://developer.android.com/studio/write/annotations'><span>Improve code inspection with annotations</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="log-messages" class="md-header-anchor"></a><span>Log messages</span></h3><p><span>When you build and run your app with Android Studio, you can view </span><a href='https://developer.android.com/studio/command-line/adb'><span>adb</span></a><span> output and device log messages in the </span><a href='https://developer.android.com/studio/debug/am-logcat'><strong><span>Logcat</span></strong><span> window</span></a><span>.</span></p><p>&nbsp;</p><h3><a name="performance-profiling" class="md-header-anchor"></a><span>Performance profiling</span></h3><p><span>If you want to profile your app&#39;s CPU, memory, and network performance, open the </span><a href='https://developer.android.com/studio/profile/android-profiler'><span>Android Profiler</span></a><span>, by clicking </span><strong><span>View &gt; Tool Windows &gt; Android Profiler</span></strong><span>.</span></p><p>&nbsp;</p><h2><a name="sign-in-to-your-developer-account" class="md-header-anchor"></a><span>Sign in to your developer account</span></h2><p><span>You can sign in to your developer account in Android Studio to access additional tools that requires authentication, such as </span><a href='https://cloud.google.com/tools/android-studio/docs/'><span>Cloud Tools for Android Studio</span></a><span> and the </span><a href='https://developers.google.com/assistant/app/test-tool'><span>App Actions test tool</span></a><span>. By signing in, you give those tools permission to view and manage your data across Google services.</span></p><p><span>After you open a project in Android Studio, you can sign in to your developer account or switch developer accounts, as follows:</span></p><ol><li><p><span>Click the profile icon the end of the toolbar, as shown in figure 8.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Studio%20Overview/img_07.png" referrerpolicy="no-referrer"></p><p><strong><span>Figure 8.</span></strong><span> Click the profile icon at the end of the toolbar to sign in.</span></p></li><li><p><span>In the window that appears, do one of the following:</span></p><ul><li><span>If you&#39;re not yet signed in, click </span><strong><span>Sign In</span></strong><span> and allow Android Studio to access the listed services.</span></li><li><span>If you&#39;re already signed in, click </span><strong><span>Add Account</span></strong><span> to sign in with another Google account. Alternatively, you can click </span><strong><span>Sign Out</span></strong><span> and repeat the previous steps to sign in to a different account.</span></li></ul></li></ol></div>
+</body>
+</html>
