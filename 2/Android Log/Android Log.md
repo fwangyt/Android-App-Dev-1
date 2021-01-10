@@ -39,7 +39,7 @@ The meaning of each parameter is shown below:
 
 In order to view the Android logs, the Logcat window is needed. It provides access to the monitoring log output from a running application in addition to options for taking screenshots and videos of the application and stopping and restarting a process.
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/2/Android%20Log/img_01.png)
 
 The following table show the function of each selection or text filed box:
 
