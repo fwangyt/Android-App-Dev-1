@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>ConstraintLayout I</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1.5em ;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h2><a name="constraintlayout-i" class="md-header-anchor"></a><span>ConstraintLayout I</span></h2><h3><a name="add-constraints" class="md-header-anchor"></a><span>Add Constraints</span></h3><p><span>There are typically 2 ways to add constraints in Layout Editor Tool for ConstraintLayout:</span></p><ul><li><span>Automatically add Constraints</span></li><li><span>Manually add Constraints</span></li></ul><h3><a name="automatically-add-constraints" class="md-header-anchor"></a><span>Automatically add Constraints</span></h3><h4><a name="autoconnect-mode" class="md-header-anchor"></a><span>Autoconnect Mode</span></h4><ul><li><p><span>Automatically establishes constraint connections as items are added to the layout.</span></p></li><li><p><span>Can be enabled and disabled using the button in toolbar.</span></p></li><li><p><span>Use algorithms to decide the best constraints to establish based on the position of the widget and the widget’s proximity to both the sides of the parent layout and other elements in the layout.</span></p></li><li><p><span>In the event that any of the automatic constraint connections fail to provide the desired behavior, these may be changed manually.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_1.png" alt="constraint_layout_1_1" style="zoom:50%;" /></p></li></ul><h4><a name="autoconnect-mode-example" class="md-header-anchor"></a><span>Autoconnect Mode Example</span></h4><ul><li><p><span>Turn on Autoconnect Mode by clicking the button.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_2.png" alt="constraint_layout_1_2" style="zoom: 50%;" /></p></li><li><p><span>Drag a widget like a button into the design view. Put it either center horizontally or vertically, or both. The dash lines will be shown to indicate this. The constraints will automatically be added.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_3.png" alt="constraint_layout_1_3" style="zoom:50%;" /></p></li></ul><h4><a name="inference-mode" class="md-header-anchor"></a><span>Inference Mode</span></h4><ul><li><p><span>Use a heuristic approach involving algorithms and probabilities to automatically implement constraint connections after widgets have already been added to the layout.</span></p></li><li><p><span>This mode is usually used when the Autoconnect feature has been turned off and objects have been added to the layout without any constraint connections.</span></p></li><li><p><span>This allows the layout to be designed simply by dragging and dropping objects from the palette onto the layout canvas and making size and positioning changes until the layout appears as required.</span></p></li><li><p><span>In essence this involves “painting” the layout without worrying about constraints.</span></p></li><li><p><span>Inference mode can also be used at any time during the design process to fill in missing constraints within a layout.</span></p></li><li><p><span>Constraints are automatically added to a layout when the </span><em><span>Infer constraints</span></em><span> button is clicked.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_4.png" alt="constraint_layout_1_4" style="zoom: 67%;" /></p><p><em><span>There could always be the possibility that the Layout Editor tool will infer incorrect constraints, which need to be manually corrected later.</span></em></p></li></ul><h4><a name="inference-mode-example" class="md-header-anchor"></a><span>Inference Mode Example</span></h4><ul><li><p><span>Make sure Autoconnect Mode is turned off.</span></p></li><li><p><span>Drag a button onto design view, then drag a TextView onto design view into design view. And click infer constraints button.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_5.png" alt="constraint_layout_1_5" style="zoom:50%;" /></p></li><li><p><span>The constraints will automatically been added.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_6.png" alt="constraint_layout_1_6" style="zoom:50%;" /></p></li></ul><h3><a name="manually-add-constraints" class="md-header-anchor"></a><span>Manually add Constraints</span></h3><h4><a name="layout-handles-on-a-widget" class="md-header-anchor"></a><span>Layout Handles on a widget</span></h4><ul><li><p><span>The spring-like lines (A) represent established constraint connections leading from the sides of the widget to the targets.</span></p></li><li><p><span>The small square markers (B) in each corner of the object are resize handles which, when clicked and dragged, serve to resize the widget.</span></p></li><li><p><span>The small circle handles (C) located on each side of the widget are the side constraint anchors. To create a constraint connection, click on the handle and drag the resulting line to the element to which the constraint is to be connected (such as a guideline or the side of either the parent layout or another widget).</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_7.png" alt="constraint_layout_1_7" style="zoom:48%;" /></p></li><li><p><span>When connecting to the side of another widget, simply drag the line to the side constraint handle of that widget and, when it turns green, release the line.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_8.png" alt="constraint_layout_1_8" style="zoom:48%;" /></p></li><li><p><span>An additional marker indicates the anchor point for baseline constraints whereby the content within the widget (as opposed to outside edges) is used as the alignment point.</span></p></li><li><p><span>To display this marker, simply click on the button displaying the letters ‘ab’ (D).</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_9.png" alt="constraint_layout_1_9" style="zoom:48%;" /></p></li><li><p><span>To establish a constraint connection from a baseline constraint handle, simply hover the mouse pointer over the handle until it begins to flash before clicking and dragging to the target (such as the baseline anchor of another).</span></p></li><li><p><span>When the destination anchor begins to flash green, release the mouse button to make the constraint connection.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_10.png" alt="constraint_layout_1_10" style="zoom:48%;" /></p></li></ul><h4><a name="adding-constraints-in-the-inspector" class="md-header-anchor"></a><span>Adding Constraints in the Inspector</span></h4><ul><li><p><span>Constraints may also be added to a view within the Android Studio Layout Editor tool using the </span><em><span>Inspector</span></em><span> panel located in the Attributes tool.</span></p></li><li><p><span>The square in the center represents the currently selected view and the areas around the square the constraints applied to the corresponding sides of the view:</span></p></li><li><p><span>The absence of a constraint on a side of the view is represented by a dotted line leading to a blue circle containing a plus sign (as is the case with the bottom edge of the view in the above figure).</span></p></li><li><p><span>To add a constraint, simply click on this blue circle and the layout editor will add a constraint connected to what it considers to be the most appropriate target within the layout.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_11.png" alt="constraint_layout_1_11" style="zoom:48%;" /></p></li></ul><h3><a name="deleting-constraints" class="md-header-anchor"></a><span>Deleting Constraints</span></h3><ul><li><p><span>To delete an individual constraint, simply click within the anchor to which it is connected.</span></p></li><li><p><span>The constraint will then be deleted from the layout (when hovering over the anchor it will glow red to indicate that clicking will perform a deletion):</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_12.png" alt="constraint_layout_1_12" style="zoom: 60%;" /></p></li><li><p><span>Remove all of the constraints on a widget by selecting it and clicking on the Delete All Constraints button which appears next to the widget when it is selected in the layout.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_13.png" alt="constraint_layout_1_13" style="zoom: 60%;" /></p></li><li><p><span>To remove all of the constraints from every widget in a layout, use button named Clear All Constraints.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_14.png" alt="constraint_layout_1_14" style="zoom: 67%;" /></p></li></ul><h3><a name="adjusting-constraint-bias" class="md-header-anchor"></a><span>Adjusting Constraint Bias</span></h3><ul><li><p><span>As has been discussed before, the concept of using bias settings to favor one opposing constraint over another was outlined.</span></p></li><li><p><span>Bias within the Android Studio Layout Editor tool is adjusted using the Inspector located in the Attributes tool window.</span></p></li><li><p><span>The two sliders indicated by the arrows in the figure are used to control the bias of the vertical and horizontal opposing constraints of the currently selected widget.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_15.png" alt="constraint_layout_1_15" style="zoom: 60%;" /></p></li><li><p><span>Suppose a button has 50% horizontal opposing bias, and 50% vertical opposing bias. It will be placed at the center of the screen.</span></p></li><li><p><span>Now change of horizontal bias to 30%, and vertical bias to 80%, it will be moved to left-bottom direction.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_16.png" alt="constraint_layout_1_16" style="zoom:50%;" /></p></li></ul><h3><a name="constraintlayout-margins" class="md-header-anchor"></a><span>ConstraintLayout Margins</span></h3><ul><li><p><span>Constraints can be used in conjunction with margins to implement fixed gaps between a widget and another element (such as another widget, a guideline or the side of the parent layout).</span></p></li><li><p><span>Consider, horizontal constraints applied to following Button.</span></p></li><li><p><span>As currently configured, horizontal constraints run to the left and right edges of the parent ConstraintLayout. As such, the widget has opposing horizontal constraints indicating that the ConstraintLayout layout engine has some discretion in terms of the actual positioning of the widget at runtime.</span></p></li><li><p><span>This allows the layout some flexibility to accommodate different screen sizes and device orientation.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_17.png" alt="constraint_layout_1_17" style="zoom:48%;" /></p></li><li><p><span>The horizontal bias setting is also able to control the position of the widget right up to the right-hand side of the layout.</span></p></li><li><p><span>For example, the following shows the same button with 100% horizontal bias applied.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_18.png" alt="constraint_layout_1_18" style="zoom:45%;" /></p></li><li><p><span>ConstraintLayout margins can appear at the end of constraint connections and represent a fixed gap into which the widget cannot be moved even when adjusting bias or in response to layout changes elsewhere in the activity.</span></p></li><li><p><span>For the following button, the right-hand constraint now includes a 50dp margin into which the widget cannot be moved even though the bias is still set at 100%.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_19.png" alt="constraint_layout_1_19" style="zoom: 50%;" /></p></li><li><p><span>Existing margin values on a widget can be modified from within the Inspector. </span></p></li><li><p><span>A dropdown menu is being used to change the right-hand margin on the currently selected widget to 16dp.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_20.png" alt="constraint_layout_1_20" style="zoom:48%;" /></p></li><li><p><span>Alternatively, clicking on the current value also allows a number to be typed into the field.</span></p></li><li><p><span>And the default margin (initially is 8dp) for new constraints can be changed at any time using the option in the toolbar.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_21.png" alt="constraint_layout_1_21" style="zoom: 67%;" /></p></li></ul><h3><a name="importance-of-opposing-constraints-and-bias" class="md-header-anchor"></a><span>Importance of Opposing Constraints and Bias</span></h3><h4><a name="issues-without-opposing-constraints" class="md-header-anchor"></a><span>Issues without Opposing Constraints</span></h4><ul><li><p><span>When a widget is constrained without opposing constraint connections, those constraints are essentially margin constraints, which is indicated visually within the Layout Editor tool by solid straight lines accompanied by margin measurements.</span></p></li><li><p><span>For example, the button shown below has constraints essentially fix the widget at that position.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_22.png" alt="constraint_layout_1_22" style="zoom: 50%;" /></p></li><li><p><span>The issue with previous layout is that if the device is rotated to landscape orientation, the widget will no longer be visible since the vertical constraint pushes it beyond the top edge of the device screen.</span></p></li><li><p><span>A similar problem will arise if the app is run on a device with a smaller screen than that used during the design process.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_23.png" alt="constraint_layout_1_23" style="zoom:48%;" /></p></li><li><p><span>When opposing constraints are implemented, the constraint connection is represented by the spring-like jagged line (the spring metaphor is intended to indicate that the position of the widget is not fixed to absolute X and Y coordinates).</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_24.png" alt="constraint_layout_1_24" style="zoom:48%;" /></p></li><li><p><span>When rotated, the widget is still visible and positioned in the same location relative to the dimensions of the screen.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_25.png" alt="constraint_layout_1_25" style="zoom:50%;" /></p><p><em><span>When designing a responsive and adaptable user interface layout, it is important to take into consideration both bias and opposing constraints when manually designing a user interface layout and making corrections to automatically created constraints.</span></em></p></li></ul><h3><a name="configuring-widget-dimensions" class="md-header-anchor"></a><span>Configuring Widget Dimensions</span></h3><ul><li><p><span>The inner dimensions of a widget within a ConstraintLayout can also be configured using the Inspector. </span></p></li><li><p><span>Widget dimensions can be set to wrap content, fixed or match constraint modes.</span></p></li><li><p><span>The prevailing settings for each dimension on the currently selected widget are shown within the square representing the widget in the Inspector as illustrated below.</span></p><ul><li><p><span>both the horizontal and vertical dimensions are set to wrap content mode</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_26.png" alt="constraint_layout_1_26" style="zoom:48%;" /></p></li><li><p><span>visual indicators to represent the three dimension modes</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_27.png" alt="constraint_layout_1_27" style="zoom: 67%;" /></p></li></ul></li><li><p><span>To change the current setting, simply click on the indicator to cycle through the three different settings.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_28.png" alt="constraint_layout_1_28" style="zoom:75%;" /></p></li><li><p><span>When the dimension of a view within the layout editor is set to match constraint mode, the corresponding sides of the view are drawn with the spring-like line instead of the usual straight lines.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_29.png" alt="constraint_layout_1_29" style="zoom: 67%;" /></p></li><li><p><span>It can also be changed in the inspector panel.</span></p></li><li><p><span>For example, the width of the following view has been set to match constraint, and its height has been left with a fixed value.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_30.png" alt="constraint_layout_1_30" style="zoom:48%;" /></p></li><li><p><span>In addition, the size of a widget can be expanded either horizontally or vertically to the maximum amount allowed by the constraints and other widgets in the layout using the </span><em><span>Expand horizontally</span></em><span> and </span><em><span>Expand vertically</span></em><span> options.</span></p></li><li><p><span>These are accessible by right clicking on a widget within the layout and selecting the </span><em><span>Organize</span></em><span> option from the resulting menu.</span></p></li><li><p><span>When used, the currently selected widget will increase in size horizontally or vertically to fill the available space around it. And this will change the widget dimension to a fixed value on selected axis.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/constraint_layout_1_31.png" alt="constraint_layout_1_31" style="zoom: 45%;" /></p></li></ul></div>
+</body>
+</html>
