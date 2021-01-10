@@ -4,13 +4,13 @@
 
 1. launch Android Studio, it will show “Welcome to Android Studio” screen. To Create a new project, Click on Start a new Android Studio project.
 
-
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Hello%20World%20Example/img_01.png)
 
 
 
 2. In Choose your project page, select Phone and Table and Empty Activity. Then click Next Button.
 
-
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Hello%20World%20Example/img_02.png)
 
 
 
@@ -26,26 +26,29 @@
 
    - Language specifies the languages you used to develop this project, it can be Java, Kotlin or both. We are going to use Java throughout the course. 
 
-
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Hello%20World%20Example/img_03.png)
 
 
 
 4. The Component Install page may pop up to download some packages for the first time, after this is done, click on Finish.
+
    - When you first time open Android Studio, Build: Sync may take longer, since it need to down load some packages, wait until it is done.
 
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Hello%20World%20Example/img_04_a.png)
 
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Hello%20World%20Example/img_04_b.png)
 
 
 
 5. When the last step is done, it will show Build: Completed successfully in the Build Window. And the right top toolbar will become active. Click on the run button  to run the App.
 
-
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Hello%20World%20Example/img_05.png)
 
 
 
 6. In Select Deployment Target page, select the simulator in Available Virtual Devices, and click on OK to run the App.
 
-
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Hello%20World%20Example/img_06.png)
 
 
 
@@ -53,3 +56,4 @@
 
 7. It will take a while to build and launch the simulator. Then the App you just created will be automatically installed and launched in the simulator with “Hello World!” in the middle.
 
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/1/Hello%20World%20Example/img_07.png)
