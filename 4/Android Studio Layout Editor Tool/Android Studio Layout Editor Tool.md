@@ -21,7 +21,7 @@
 
 In design mode, the user interface can be visually manipulated by directly working with the view palette and the graphical representation of the layout.
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20Studio%20Layout%20Editor%20Tool/img_01.png)
 
 
 
@@ -41,7 +41,7 @@ In design mode, the user interface can be visually manipulated by directly worki
 
 #### Palette
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20Studio%20Layout%20Editor%20Tool/img_02.png)
 
 - Layout Editor palette is organized into two panels.
 
@@ -61,9 +61,11 @@ In design mode, the user interface can be visually manipulated by directly worki
 - The toolbar menu shown provides options to display the Design, Blueprint, or both views.
 - The fourth option, *Force Refresh Layout* will cause the layout to rebuild and redraw. This can be useful when the layout enters an unexpected state or is not accurately reflecting the current design settings (It is not a mode)
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20Studio%20Layout%20Editor%20Tool/img_03.png)
 
 Whether to display the layout view, design view or both is a matter of personal preference. A good approach is to begin with both displayed
+
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20Studio%20Layout%20Editor%20Tool/img_04.png)
 
 
 
@@ -74,6 +76,8 @@ Whether to display the layout view, design view or both is a matter of personal 
 - To return to design mode, simply click on the *Design* tab.
 
 
+
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20Studio%20Layout%20Editor%20Tool/img_05.png)
 
 **A – Editor** – The editor panel displays the XML that makes up the current user interface layout design.
 
@@ -93,7 +97,7 @@ Whether to display the layout view, design view or both is a matter of personal 
 
 For example, the following shows this subset of attributes for the TextView widget:
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20Studio%20Layout%20Editor%20Tool/img_06.png)
 
 
 
@@ -113,4 +117,6 @@ For example, the following shows this subset of attributes for the TextView widg
 
 - For example, set the attributes to a view in Layout Editor tool, it will be shown the same in XML file, and vice versa.
 
-  
+  ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20Studio%20Layout%20Editor%20Tool/img_08.png)
+
+  ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20Studio%20Layout%20Editor%20Tool/img_09.png)

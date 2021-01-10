@@ -124,9 +124,19 @@ For example, setting a *center_vertical* gravity value on a child will cause it 
 
 Example: consider the following user interface, one way to achieve this is using the layout mechanism shown in right figure. In addition to the visible button and checkbox views, the user interface actually includes a number of layout views that control how the visible views are positioned.
 
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20View%2C%20View%20Group%20and%20Layout%20Manager/img_01.png)
 
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20View%2C%20View%20Group%20and%20Layout%20Manager/img_02.png)
 
 
 
 User interfaces are constructed in the form of a view hierarchy with a root view at the top. The example user interface discussed before can be visualized in the form of the view tree.
+
+
+
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20View%2C%20View%20Group%20and%20Layout%20Manager/img_03.png)
+
+
+
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/4/Android%20View%2C%20View%20Group%20and%20Layout%20Manager/img_04.png)
 
