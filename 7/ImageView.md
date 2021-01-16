@@ -10,7 +10,7 @@
    import android.widget.ImageView;
    ```
    
-   <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\7\images\image_view_1.png" alt="image_view_1" style="zoom:80%;" />
+   <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/7/images/image_view_1.png" alt="image_view_1" style="zoom:80%;" />
 
 ### Create
 
