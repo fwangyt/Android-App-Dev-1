@@ -4,7 +4,7 @@
 
 A layout that arranges other views either **horizontally** in a single column or **vertically** in a single row.
 
-<img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\linear_layout_1.png" alt="linear_layout_1" style="zoom:67%;" />
+<img src="https://github.com/fwangyt/Android-App-Dev-1/raw/master/8/images/linear_layout_1.png" alt="linear_layout_1" style="zoom:67%;" />
 
 ### Create
 
@@ -14,13 +14,13 @@ A layout that arranges other views either **horizontally** in a single column or
   - Find the *activity_name.xml* file.
   - Change ConstraintLayout to LinearLayout
 
-<img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\linear_layout_2.png" alt="linear_layout_2" style="zoom: 67%;" />
+<img src="https://github.com/fwangyt/Android-App-Dev-1/raw/master/8/images/linear_layout_2.png" alt="linear_layout_2" style="zoom: 67%;" />
 
 - Or use layout editor to convert view
 
   - Component Tree -> right click on ConstraintLayout -> convert view…
 
-    <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\linear_layout_3.png" alt="linear_layout_3" style="zoom: 67%;" />
+    <img src="https://github.com/fwangyt/Android-App-Dev-1/raw/master/8/images/linear_layout_3.png" alt="linear_layout_3" style="zoom: 67%;" />
 
 ### Orientation
 
@@ -34,7 +34,7 @@ A layout that arranges other views either **horizontally** in a single column or
 
 - Or use layout editor to convert the orientation
 
-  <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\linear_layout_4.png" alt="linear_layout_4" style="zoom: 50%;" />
+  <img src="https://github.com/fwangyt/Android-App-Dev-1/raw/master/8/images/linear_layout_4.png" alt="linear_layout_4" style="zoom: 50%;" />
 
 ### Gravity
 
