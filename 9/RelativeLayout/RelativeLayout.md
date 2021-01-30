@@ -6,7 +6,7 @@
 
 **RelativeLayout:** is a view group that displays child views in relative positions. The position of each view can be specified as relative to sibling elements (such as to the left-of or below another view) or in positions relative to the parent RelativeLayoutarea (such as aligned to the bottom, left or center).
 
-
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/9/RelativeLayout/img_01.png)
 
 ### Create
 
@@ -14,12 +14,13 @@
 
 -   Edit XML directly.
 
-    
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/9/RelativeLayout/img_02.png)
 
 -   Use layout editor to convert view
+    
     -   Component Tree -> right click on ConstraintLayout
-
-
+    
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/9/RelativeLayout/img_03.png)
 
 ### Positioning
 
