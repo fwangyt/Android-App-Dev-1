@@ -9,7 +9,7 @@
 
 - In this assignment, you are to create a blog-like UI. You may choose your own images and essay/article as resources. An example is shown below.
 
-  <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\assignment_1.png" alt="assignment_1" style="zoom:67%;" />
+  <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/assignment_1.png" alt="assignment_1" style="zoom:67%;" />
 
 - ScrollView
 
@@ -56,7 +56,7 @@
   - Layout constraints
     - Place the button at the lower-right corner. 
 
-      <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\assignment_2.png" alt="assignment_2" style="zoom: 67%;" />
+      <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/assignment_2.png" alt="assignment_2" style="zoom: 67%;" />
 
 ### Submission
 
