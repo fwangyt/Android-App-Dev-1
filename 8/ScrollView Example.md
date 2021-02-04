@@ -6,21 +6,21 @@
 
    - AppTheme: change to NoActionBar
 
-   <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_1.png" alt="scrollview_example_1" style="zoom: 67%;" />
+   <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_1.png" alt="scrollview_example_1" style="zoom: 67%;" />
 
 3. In layout editor, delete the default "hello world" TextView.
 
 4. Palette -> Containers -> ScrollView and drag it into the visual design editor
 
-   <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_2.png" alt="scrollview_example_2" style="zoom:67%;" />
+   <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_2.png" alt="scrollview_example_2" style="zoom:67%;" />
 
 5. Add constraints to the ScrollView.
 
-   <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_3.png" alt="scrollview_example_3" style="zoom: 67%;" />
+   <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_3.png" alt="scrollview_example_3" style="zoom: 67%;" />
 
 6. Click on LinearLayout under ScrollView in Component Tree. It shows a dash line, which means there is no child view within the LinearLayout because the height of it is "wrap_content".
 
-   <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_4.png" alt="scrollview_example_4" style="zoom:80%;" />
+   <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_4.png" alt="scrollview_example_4" style="zoom:80%;" />
 
 7. Drag and drop a button within the LinearLayout. 
 
@@ -28,11 +28,11 @@
 
    - Drop a button within the LinearLayout.
 
-     <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_5.png" alt="scrollview_example_5" style="zoom: 67%;" />
+     <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_5.png" alt="scrollview_example_5" style="zoom: 67%;" />
 
    - Drop a button outside of the LinearLayout.
 
-     <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_6.png" alt="scrollview_example_6" style="zoom: 67%;" />
+     <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_6.png" alt="scrollview_example_6" style="zoom: 67%;" />
 
 9. Fix the button’s attributes.
 
@@ -41,19 +41,19 @@
    - Layout_marginEnd = 100dp
    - Layout_marginBottom = 50dp
 
-   <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_7.png" alt="scrollview_example_7" style="zoom:80%;" />
+   <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_7.png" alt="scrollview_example_7" style="zoom:80%;" />
 
 10. Set the background color on both ScrollView and LinearLayout.
 
-    <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_8.png" alt="scrollview_example_8" style="zoom:80%;" />
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_8.png" alt="scrollview_example_8" style="zoom:80%;" />
 
 11. Run the app and there is no scroll effect.
 
-    <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_9.png" alt="scrollview_example_9" style="zoom:75%;" />
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_9.png" alt="scrollview_example_9" style="zoom:75%;" />
 
 12. Now, let’s copy the button and paste it 6 times. 
 
-    <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_10.png" alt="scrollview_example_10" style="zoom:80%;" />
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_10.png" alt="scrollview_example_10" style="zoom:80%;" />
 
 13. A part of ScrollView is not showing on the visual design.
 
@@ -63,8 +63,8 @@
 
     - By clicking on at the lower-right corner of the visual design.
 
-      <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_11.png" alt="scrollview_example_11" style="zoom: 50%;" />
+      <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_11.png" alt="scrollview_example_11" style="zoom: 50%;" />
 
 16. Now, run the app.
 
-    <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\8\images\scrollview_example_12.png" alt="scrollview_example_12" style="zoom: 67%;" />
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/8/images/scrollview_example_12.png" alt="scrollview_example_12" style="zoom: 67%;" />
