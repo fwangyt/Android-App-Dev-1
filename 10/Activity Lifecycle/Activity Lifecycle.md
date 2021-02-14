@@ -9,7 +9,7 @@
 -   When making a determination as to which process to terminate, the system considers both the priority and state of all currently running processes, combining these factors to create what is referred to by Google as an importance hierarchy
 -   Processes are then terminated starting with the lowest priority and working up the hierarchy until sufficient resources have been liberated for the system to function
 
-Img_01
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_01.png" style="zoom:67%;" />
 
 Within an Android system, the current state of a process is defined by the highest-ranking active component within the application that it hosts. A process can be in one of the following five states at any given time:
 
@@ -39,7 +39,7 @@ Within an Android system, the current state of a process is defined by the highe
 
 #### 2.1 Activity Stack
 
-Img_02
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_02.png" style="zoom:67%;" />
 
 
 
@@ -113,7 +113,7 @@ When overriding the lifecycle methods, it is necessary to include a call to the 
 
 **Activity Lifecycle States and Lifetimes** 
 
-Img_03
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_03.png)
 
 -   Created (not visible yet)
     -   **onCreate(Bundle savedInstanceState)**—static initialization
@@ -140,8 +140,6 @@ Img_03
 
 **Activity Lifetimes** 
 
-Img_04
-
 -   An activity will transition some lifetimes through execution including *entire*, *visible* and *foreground* lifetimes.
 
 -   An activity may pass through the *foreground* and *visible* lifetimes multiple times during the course of the *entire* lifetime.
@@ -160,45 +158,45 @@ Img_04
 
 2.  Add following code to MainActivity.java file.
 
-    Img_05
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_05.png" style="zoom:50%;" />
 
-    Img_06
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_06.png" alt="Img_06" style="zoom:50%;" />
 
 3.  Go to Logcat, and add “Lifecycle” to the filter.
 
-    Img_07
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_07.png" style="zoom:50%;" />
 
 4.  Run the App, it will display the following log in the LogCat.
 
-    Img_08
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_08.png)
 
 5.  Click on Clear logcat button to clean up the current logs.
 
-    Img_09
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_09.png" style="zoom:50%;" />
 
-    Img_10
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_10.png)
 
 6.  Click on home button, it will display the following log in the LogCat.
 
-    Img_11
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_11.png" style="zoom:50%;" />
 
-    Img_12
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_12.png)
 
 7.  Clear the log again, then go back to the App by clicking on the App lists button, add select ActivityLifecycleExampleApp.
 
-    Img_13
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_13.png" style="zoom:50%;" />
 
-    Img_14
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_14.png" style="zoom:50%;" />
 
 8.  Then it will display the following log in the LogCat.
 
-    img_15
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_15.png)
 
 9.  Clear the Logcat again, then click on the back button. And it will display the following log in the LogCat.
 
-    Img_16
+    <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_16.png" style="zoom:50%;" />
 
-    Img_17
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Activity%20Lifecycle/img_17.png)
 
 
 
