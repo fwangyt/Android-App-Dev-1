@@ -13,7 +13,7 @@
 
   In this assignment, you are to create a shopping list app by using ActionBar and Menu. You can choose a category that you like with at least three items under that category including their images, titles, and prices. An example is shown below.
 
-Img_01
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Assignment/img_01.png" alt="Img_01" style="zoom:80%;" />
 
 - ActionBar Title
 
@@ -34,7 +34,7 @@ Img_01
   ❖ To display a list of options. Each option represents an item.
   ❖ When clicking on the option, update the image, title, and price based on the selected item.
 
-IMG_02
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Assignment/img_02.png" style="zoom:80%;" />
 
 - Bonus: Lowest Price Action Item (yellow star)
 
