@@ -100,5 +100,5 @@
   abstract void setSubtitle(CharSequence subtitle);
   ```
 
-- •[https://developer.android.com/reference/android/support/v7/app/ActionBar#public-methods](https://developer.android.com/reference/android/support/v7/app/ActionBar)
+- [https://developer.android.com/reference/android/support/v7/app/ActionBar#public-methods](https://developer.android.com/reference/android/support/v7/app/ActionBar)
 
