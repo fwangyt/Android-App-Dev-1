@@ -10,7 +10,7 @@
   import android.view.Menu;
   ```
 
-  <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\11\images\menu_1.png" alt="menu_1" style="zoom:75%;" />
+  <img src="https://github.com/fwangyt/Android-App-Dev-1/raw/master/11/images/menu_1.png" alt="menu_1" style="zoom:75%;" />
 
 ### Creation
 
@@ -22,7 +22,7 @@
 
   - Enter the file name, select Resource type as Menu, and click on OK.
 
-  <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\11\images\menu_2.png" alt="menu_2" style="zoom: 67%;" />
+  <img src="https://github.com/fwangyt/Android-App-Dev-1/raw/master/11/images/menu_2.png" alt="menu_2" style="zoom: 67%;" />
 
 - Add MenuItem to the Menu. MenuItem is an interface for direct access to a previously created menu item.
 
@@ -30,11 +30,11 @@
 
   - Or write XML directly
 
-  <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\11\images\menu_3.png" alt="menu_3" style="zoom:67%;" />
+  <img src="https://github.com/fwangyt/Android-App-Dev-1/raw/master/11/images/menu_3.png" alt="menu_3" style="zoom:67%;" />
 
 - In the activity file (i.e. MainActivity.java), override onCreateOptionsMenu() method to specify the options menu for an activity. In this method, you can inflate your menu resource (defined in XML) into the Menu provided in the callback.
 
-  <img src="C:\Users\LSY\Desktop\安卓课\安卓1\Android-App-Dev-1\11\images\menu_4.png" alt="menu_4" style="zoom: 70%;" />
+  <img src="https://github.com/fwangyt/Android-App-Dev-1/raw/master/11/images/menu_4.png" alt="menu_4" style="zoom: 70%;" />
 
 ### MenuItem: XML Attributes and Methods
 
