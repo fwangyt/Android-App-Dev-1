@@ -8,7 +8,7 @@
 
 ​	In this assignment, you are to create a simple music player by using MediaPlayer. As usual, you can choose at least three songs that you like as your resources. An example is shown below.
 
-Img_01
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/Assignment/img_01.png)
 
 **SongInfo TextView**
 
@@ -31,7 +31,7 @@ Img_01
 - To play or pause the song.
 - When the song is playing, the text on the button should be “pause”. Otherwise, the text on the button should be “play”.
 
-Img_02
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/Assignment/img_02.png)
 
 **Bonus: Loop Playback**
 
