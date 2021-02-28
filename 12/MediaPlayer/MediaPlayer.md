@@ -14,7 +14,7 @@ The media resources can be loaded from:
 
 Before playing the audio, the audio file need to be put as resources in the App. This step is much like putting the image files into the resources folders as we did previously. However, the difference is the audio file should be put it *raw* resources folder, if it does not exist, we need to create one.
 
-Img_01
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_01.png)
 
 There are generally 2 ways to create an instance of the MediaPlayer, and set the media resource:
 
@@ -57,7 +57,7 @@ Media Play Control methods
 
 ### Example
 
-Example Code: 
+Example Code: [Code](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/MediaPlayerExample.zip)
 
 
 
@@ -67,61 +67,61 @@ Example Code:
 
    the center of the screen. Set the id to play_btn, and set Text to Play.
 
-   Img_02
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_02.png)
 
 3. Drag another Button, and put it aside the Play Button. Set ID to pause_btn, and set Text to Pause.
 
-   Img_03
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_03.png)
 
 4. Drag the last Button, and put it aside the Pause Button. Set ID to stop_btn, and set Text to Stop.
 
-   Img_04
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_04.png)
 
 5. Add the constraints for the 3 Buttons, it is a good approach to create the horizontal chain for them. Select Buttons, and right click, then click on Chains, and Create Horizontal Chain.
 
-   Img_05
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_05.png)
 
 6. Add the vertical constraints for each button. A alternative approach is to select each Button, adjust the values to 0, and set Vertical Bias to whatever needed.
 
-   Img_06
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_06.png)
 
-   Img_07
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_07.png)
 
 7. After doing the previous approach for each button, the result will looks like the following way.
 
-   Img_08
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_08.png)
 
 8. Go to MainActivity.java file, add the following code to get references to the three buttons.
 
-   Img_09
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_09.png)
 
 9. Right click on resources folder, then click New, and Directory. In the popup Window, enter *raw* to create a raw resources folder.
 
-   Img_10_0
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_10_0.png)
 
-   Img_10_1
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_10_1.png)
 
-   Img_10_2
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_10_2.png)
 
 10. Copy and paste your music file into the raw resources folder.
      Note: Please make sure the name before the extension(.mp3) contains only a-z, 0-9 and ”_”, and the numbers don’t start first. Or it will give compile errors later.
 
-    Img_11
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_11.png)
 
-    Img_12
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_12.png)
 
 11. Add the following code in MainActivity.java to create a MediaPlayer, and load the music we just added.
 
-    Img_13
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_13.png)
 
 12. Then add the following code to add OnClickListener for each Button to the behave MediaPlayer corresbonding controls.
 
-    Img_14
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_14.png)
 
 13. Run the App, and enjoy the music. You may need to turn up the volume by clicking on the following button. How ever you may notice the Play Button doesn’t work once you click on the Stop Button.
 
-    Img_15
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_15.png)
 
 14. To solve the issue, when the stop method is called, the prepare method need to be called before the start method to make it work again. Add the following code to solve this issue.
 
-    Img_16
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/MediaPlayer/img_16.png)
