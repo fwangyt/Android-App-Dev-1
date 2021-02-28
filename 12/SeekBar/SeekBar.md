@@ -28,7 +28,7 @@ Clients of the SeekBar can attach a SeekBar.OnSeekBarChangeListener interface to
 
 **SeekBar Example**
 
-Example Code: 
+Example Code: [Code](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/SeekBar/SeekBarExample.zip)
 
 1. Create an project with Empty Activity, and name it SeekBarExample.
 
