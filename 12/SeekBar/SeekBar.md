@@ -4,7 +4,7 @@
 
 A SeekBar is an extension of ProgressBar that adds a draggable thumb.
 
-Img_00
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/SeekBar/img_00.png)
 
 There are 2 ways to change the progress value of the SeekBar:
 
@@ -36,24 +36,25 @@ Example Code:
 
    screen with constrains.
 
-   Img_01
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/SeekBar/img_01.png)
 
 3. We can notice that the SeekBar is too small, change the width of it to 200dp to make it larger.
 
-   Img_02
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/SeekBar/img_02.png)
 
 4. Drag a TextView under the SeekBar, and put it center horizontally with constraints. Set ID to progress_tv, and delete the existing text on it.
 
-   Img_03
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/SeekBar/img_03.png)
 
 5. Go to MainActivity.java file, add the following code to get the references to the widgets.
 
-   Img_04
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/SeekBar/img_04.png)
 
 6. Add the following code to set the OnSeekBarChangeListener for the SeekBar to listen to the progress change, and make the value reflect on the TextView.
 
-   Img_05
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/SeekBar/img_05.png)
 
 7. Run the App, and drag the SeekBar, the progress value will be displayed on the TextView.
 
-   Img_06
+   ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/12/SeekBar/img_06.png)
+
