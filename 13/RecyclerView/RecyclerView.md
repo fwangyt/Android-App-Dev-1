@@ -40,30 +40,26 @@ Unlike the ListView, the RecyclerViewalso provides a choice of three built-in la
 
 #### **How RecyclerView Components Fit Together**
 
-img_01
+![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView/img_01.png)
 
 
 
 #### **Layout Manager**
 
 -   Each ViewGrouphas a layout manager
-
 -   Use to position Viewitems inside a RecyclerView
-
 -   Reuses Viewitems that are no longer visible to the user 
-
 -   Built-in layout managers 
     -   LinearLayoutManager
     -   GridLayoutManager
     -   StaggeredGridLayoutManager
-
 -   Extend RecyclerView.LayoutManager
 
-Img_02
+  <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView/img_02.png" style="zoom:50%;" />
 
-Img_03
+  <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView/img_03.png" style="zoom:50%;" />
 
-Img_04
+  <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView/img_04.png" style="zoom:50%;" />
 
 
 
@@ -76,7 +72,7 @@ Img_04
 
 -   Manages creating, updating, adding, deleting Viewitems as underlying data changes
 
-img_05
+  <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView/img_05.png" style="zoom:50%;" />
 
 RecyclerViewdepends on an adapter to act as the intermediary between the RecyclerViewinstance and the data that is to be displayed to the user. 
 
@@ -100,7 +96,7 @@ The adapter is created as a subclass of the RecyclerView.Adapterclass and must, 
 
 -   Is placed by the layout manager
 
-img_05
+  <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView/img_05.png" style="zoom:50%;" />
 
 
 

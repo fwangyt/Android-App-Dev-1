@@ -4,7 +4,7 @@ Toasts are transient notifications that don’t steal focus, cannot be interacte
 
 Given these limitations, they should only be used to confirm a user’s action immediately after it occurs, or for system-level messages. They should only be displayed when your app has an active Activity visible. It is usually when displaying some information. For example, in an App that requires authentication, a toast can be used to display some information like the credentials are not right.
 
-Img_01
+ ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_01.png)
 
 
 
@@ -32,20 +32,20 @@ Example code:
 
 2.  Go to activity_main.xml file, delete the existing TextView.
 
-    Img_02
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_02.png)
 
 3.  Drag a Button to the center of the screen with constraints, set ID to short_toast_btn, and set text to Display a Short Toast
 
-    img_03
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_03.png)
 
 4.  Drag another Button and place it below the previous Button, and add constraints to it. Then set ID to long_toast_btn, and set text to Display a Long Toast.
 
-    img_04
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_04.png)
 
 5.  Go to MainActivity.java file, and add the following code.
 
-    Img_05
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_05.png)
 
 6.  Run the App, and click on each Button to feel the difference between the time durationg of the two toasts
 
-    Img_06
+    ![](https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_06.png)
