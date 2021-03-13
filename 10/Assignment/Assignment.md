@@ -13,9 +13,9 @@
 
 ​	In this assignment, you are to create a mortgage assistance (or loan calculator) app. The formula is provided to you under Supplements. Since you have already learned layouts, your app should run well on any one of Android emulators. You will lose points if your UI has overlap or out-of-screen issues when running the app on different emulators. Test your app on several emulators after you finish it. An example is shown below. You can design the UI following the example or design for yourself.
 
-Img_01
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Assignment/img_01.png" style="zoom:50%;" />
 
-Img_02
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Assignment/img_02.png" style="zoom:50%;" />
 
 
 
@@ -48,7 +48,7 @@ Img_02
     -   If choose to input the period via RadioButton, clear the years EditText. 
     -   If choose to input the period via years EditText, clear the RadioGroup.
 
-img_03
+<img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Assignment/img_03.png" style="zoom:50%;" />
 
 ### Submission
 
@@ -65,5 +65,7 @@ img_03
 
 
 ### Supplements
+
+  <img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/10/Assignment/img_04.png" style="zoom:50%;" />
 
   Demo video: https://www.youtube.com/watch?v=cEYipjvfGLc&ab_channel=BoldDong.
