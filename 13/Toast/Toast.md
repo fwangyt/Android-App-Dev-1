@@ -24,7 +24,7 @@ toast.show();
 
 ### Example
 
-Example code: 
+Example code: [code](https://github.com/fwangyt/Android-App-Dev-1/raw/master/13/Toast/ToastExample.zip)
 
 
 

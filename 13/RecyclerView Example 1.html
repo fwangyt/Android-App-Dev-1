@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>Toast</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+<title>RecyclerView Example 1</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
@@ -162,79 +162,6 @@ mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 .md-diagram-panel .start-state { fill: var(--node-fill); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
 .md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
-
-
-.CodeMirror { height: auto; }
-.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
-.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
-.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
-.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit inherit; background-repeat: inherit inherit; }
-.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
-.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
-.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
-.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
-.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
-.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
-.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
-.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
-.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
-.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
-.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
-.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
-.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
-.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
-.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
-.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
-.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
-.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
-.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
-.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
-.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
-.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
-.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
-.cm-negative { color: rgb(221, 68, 68); }
-.cm-positive { color: rgb(34, 153, 34); }
-.cm-header, .cm-strong { font-weight: 700; }
-.cm-del { text-decoration: line-through; }
-.cm-em { font-style: italic; }
-.cm-link { text-decoration: underline; }
-.cm-error { color: red; }
-.cm-invalidchar { color: red; }
-.cm-constant { color: rgb(38, 139, 210); }
-.cm-defined { color: rgb(181, 137, 0); }
-div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
-div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
-.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
-.CodeMirror { position: relative; overflow: hidden; }
-.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
-.CodeMirror-sizer { position: relative; }
-.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
-.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
-.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
-.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
-.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
-.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
-.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
-.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
-.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
-.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
-.CodeMirror-lines { cursor: text; }
-.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; background-repeat: initial initial; }
-.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
-.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
-.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
-.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
-.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
-.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
-.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
-.CodeMirror-measure pre { position: static; }
-.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
-.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
-.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
-.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
-@media print { 
-  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
-}
 
 
 :root {
@@ -621,6 +548,19 @@ header, .context-menu, .megamenu-content, footer{
 </style>
 </head>
 <body class='typora-export'>
-<div id='write'  class=''><h2><a name="toast" class="md-header-anchor"></a><span>Toast</span></h2><p><span>Toasts are transient notifications that don’t steal focus, cannot be interacted with, and are non-modal; they appear, show a brief message, and then disappear. </span></p><p><span>Given these limitations, they should only be used to confirm a user’s action immediately after it occurs, or for system-level messages. They should only be displayed when your app has an active Activity visible. It is usually when displaying some information. For example, in an App that requires authentication, a toast can be used to display some information like the credentials are not right.</span></p><p><span> </span><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_01.png" referrerpolicy="no-referrer"></p><p>&nbsp;</p><p><span>The Toast class includes a static makeText method that creates a standard Toast display window.</span></p><p><span>To construct a new Toast, pass the current Context, the text to display, and the length of time to display it (</span><code>LENGTH_SHORT</code><span> or </span><code>LENGTH_LONG</code><span>) into the makeText method. After creating a Toast, you can display it by calling show method.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="java"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="java"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Context</span> <span class="cm-variable">context</span> <span class="cm-operator">=</span> <span class="cm-keyword">this</span>;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">String</span> <span class="cm-variable">msg</span> <span class="cm-operator">=</span> <span class="cm-string">"To health and happiness!"</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-3">int</span> <span class="cm-variable">duration</span> <span class="cm-operator">=</span> <span class="cm-variable">Toast</span>.<span class="cm-variable">LENGTH_SHORT</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">Toast</span> <span class="cm-variable">toast</span> <span class="cm-operator">=</span> <span class="cm-variable">Toast</span>.<span class="cm-variable">makeText</span>(<span class="cm-variable">context</span>, <span class="cm-variable">msg</span>, <span class="cm-variable">duration</span>);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">toast</span>.<span class="cm-variable">show</span>();</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 110px;"></div><div class="CodeMirror-gutters" style="display: none; height: 110px;"></div></div></div></pre><p>&nbsp;</p><h3><a name="example" class="md-header-anchor"></a><span>Example</span></h3><p><span>Example code: </span><a href='https://github.com/fwangyt/Android-App-Dev-1/raw/master/13/Toast/ToastExample.zip'><span>code</span></a></p><p>&nbsp;</p><ol><li><span>Create an Android Studio project with Empty Activity, and name it ToastExample</span></li></ol><ol start='2' ><li><p><span>Go to activity_main.xml file, delete the existing TextView.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_02.png" referrerpolicy="no-referrer"></p></li><li><p><span>Drag a Button to the center of the screen with constraints, set ID to short_toast_btn, and set text to Display a Short Toast</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_03.png" referrerpolicy="no-referrer"></p></li><li><p><span>Drag another Button and place it below the previous Button, and add constraints to it. Then set ID to long_toast_btn, and set text to Display a Long Toast.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_04.png" referrerpolicy="no-referrer"></p></li><li><p><span>Go to MainActivity.java file, and add the following code.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_05.png" referrerpolicy="no-referrer"></p></li><li><p><span>Run the App, and click on each Button to feel the difference between the time durationg of the two toasts</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/Toast/img_06.png" referrerpolicy="no-referrer"></p></li></ol></div>
+<div id='write'  class=''><h2><a name="recyclerview-example-1" class="md-header-anchor"></a><span>RecyclerView Example 1</span></h2><p><span>Example Code: </span><a href='https://github.com/fwangyt/Android-App-Dev-1/raw/master/13/RecyclerView%20Example%201/RecyclerViewDemo1.zip'><span>code</span></a></p><ol><li><p><span>Create an Android App with Empty Activity, and name it RecyclerViewDemo1.</span></p></li><li><p><span>Go to activity_main.xml file, delete the existing TextView. Click on the download button aside the</span>
+<span>RecyclerViewto add the RecyclerViewsupport Library.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_01.png" referrerpolicy="no-referrer"></p><p><span>Note: To add the RecyclerViewsupport Library, it can also be achieve by adding the line of code to app’s</span>
+<span>build.gradlefile.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_02.png" style="zoom:50%;" /></p></li><li><p><span>Drag a RecyclerViewto the Design View with constraints, just keep the existing ID.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_03.png" referrerpolicy="no-referrer"></p></li></ol><ol start='4' ><li><p><span>Right click on layout under res, then click on New and Layout recourse file. Add file name as food_item,</span>
+<span>and change Root element to LinearLayout. Then click on OK.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_04.png" referrerpolicy="no-referrer"></p></li></ol><ol start='5' ><li><p><span>To try a different way, this time we add the UI by code. Go to Text mode in food_item.xml file. Change the</span>
+<span>root layout_heightto wrap_content. And then add the following code.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_05.png" style="zoom:33%;" /></p></li></ol><ol start='6' ><li><p><span>Go back to Design mode, we can notice that one item template has been created. This is just how each item</span>
+<span>will look like. Note: the text on the TextViewdoesn’t matter, it is just for effect and placeholder, and will be</span>
+<span>changed later by code.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_06.png" referrerpolicy="no-referrer"></p></li></ol><ol start='7' ><li><p><span>Create a Food class to contain the information for food. Right click on the package name, and click New,</span>
+<span>then Java Class. Enter Food as class Name, then click on OK.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_07.png" referrerpolicy="no-referrer"></p></li></ol><ol start='8' ><li><p><span>Add the following fields, getters, setters and constructors to the Food class in Food.java.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_08.png" style="zoom:33%;" /></p></li></ol><ol start='9' ><li><p><span>Now, it is the time to create a data bridge for the RecyclerView. Create a class named</span>
+<span>MyRecyclerViewAdapterand let it extend RecyclerView.Adapter.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_09.png" style="zoom:33%;" /></p></li></ol><ol start='10' ><li><p><span>Put the mouse cursor on the class definition with red line. Then the right bulb will pop up, then click on</span>
+<span>Implement method. Then click on OK.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_10.png" referrerpolicy="no-referrer"></p></li></ol><ol start='11' ><li><p><span>Add a List of Food type to the adapter as well as the constructor. This is used for storing all the food data.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_11.png" referrerpolicy="no-referrer"></p></li></ol><ol start='12' ><li><p><span>Create a ViewHolderclass extends RecyclerView.ViewHolderinsideMyRecyclerViewAdapter, the</span>
+<span>ViewHolderclass is used for containing all the UI for each item. Then find each UI with the ID on the item.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_12.png" referrerpolicy="no-referrer"></p></li></ol><ol start='13' ><li><p><span>The onCreateViewHolderis used for creating the ViewHolderclass, it is usually created by inflating from</span>
+<span>the item.xml file using LayoutInflater. Add the following code to onCreateViewHoldermethod.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_13.png" style="zoom:50%;" /></p></li></ol><ol start='14' ><li><p><span>The onBindViewHoldermethod is used for setting the data value for each item UI. Add the following</span>
+<span>code to onBindViewHoldermethod. ViewHolderclass is the ViewHolderthat we have created in</span>
+<span>onCreateViewHoldermethod which contains all the UI. And iis the index of the current item.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_14.png" style="zoom:50%;" /></p></li></ol><ol start='15' ><li><p><span>The getItemCountreturn the number of items. Simply return the size of foodList.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_15.png" style="zoom:50%;" /></p></li></ol><ol start='16' ><li><p><span>Go the MainActivity.java file, create a food data, the adapter, and set the adapter for the RecyclerView.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_16.png" style="zoom:50%;" /></p></li></ol><ol start='17' ><li><p><span>Run the App, but we cannot see anything. This is because, there is no food in the food list.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_17.png" style="zoom:33%;" /></p></li></ol><ol start='18' ><li><p><span>Now, let’s add some data to the food list.</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_18.png" style="zoom:50%;" /></p></li></ol><ol start='19' ><li><p><span>Run the App again, we can notice that the three food added to the food list have been reflected on</span></p><p><img src="https://raw.githubusercontent.com/fwangyt/Android-App-Dev-1/master/13/RecyclerView%20Example%201/img_19.png" style="zoom:33%;" /></p></li></ol></div>
 </body>
 </html>
